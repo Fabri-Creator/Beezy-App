@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14 px;
+  font-family: "Roboto", sans-serif;
+}
+select {
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+button {
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+button:active {
+  border-style: none;
+  outline: none;
+}
+button:focus {
+  border-style: none;
+  outline: none;
+}
+input {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+}
+input:focus {
+  outline: none;
+}
