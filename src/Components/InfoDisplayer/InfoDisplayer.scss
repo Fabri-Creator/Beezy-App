@@ -34,7 +34,7 @@
     }
     .title-container {
       color: black;
-      h2 {
+      .title-containe-text {
         letter-spacing: 0.1rem;
         padding: 0.5rem;
       }
@@ -43,7 +43,7 @@
       width: 80%;
       height: auto;
       padding: 3% 1rem 5% 1rem;
-      h3 {
+      .description-container-text {
         text-align: justify;
         letter-spacing: 0.05rem;
       }

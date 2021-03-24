@@ -10,7 +10,7 @@ const Banner = () => {
 
   useEffect(() => {
     setBannerImg(Math.floor(Math.random() * 5));
-    getEvents(setBannerInfo).then((events) => {
+    getEvents().then((events) => {
       setBannerInfo(events);
     });
   }, []);
@@ -18,8 +18,8 @@ const Banner = () => {
   return (
     <div className="main-banner">
       <div className="title-banner">
-        <h2>MARVEL Beezy EDITION</h2>
-        <h4>
+        <h2 className="title-dos">MARVEL Beezy EDITION</h2>
+        <h4 className="title-cuatro">
           This is a technical exercise for Beezy to showcase front-end
           development skills
         </h4>

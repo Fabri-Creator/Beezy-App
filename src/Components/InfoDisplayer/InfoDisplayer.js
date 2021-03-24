@@ -42,14 +42,16 @@ const InfoDisplayer = () => {
               onClick={handleGoBack}
             ></i>
             <div className="title-container">
-              <h2>
+              <h2 className="title-containe-text">
                 {idData.name
                   ? idData.name.toUpperCase()
                   : idData.title.toUpperCase()}{" "}
               </h2>
             </div>
             <div className="description-container">
-              <h3>{idData.description}</h3>
+              <h3 className="description-container-text">
+                {idData.description}
+              </h3>
             </div>
             <button className="button-info-displayer">READ PROFILE</button>
           </div>

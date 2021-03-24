@@ -10,7 +10,7 @@ const SuperSearch = ({ handleSuperHeroName, handleSuperHeroSearch }) => {
 
   return (
     <div className="main-search">
-      <h3>FIND YOUR CHARACTER</h3>
+      <h3 className="search-text">FIND YOUR CHARACTER</h3>
       <div className="bar-search">
         <form onSubmit={handleSubmit}>
           <input

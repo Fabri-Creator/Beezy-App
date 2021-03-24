@@ -29,7 +29,6 @@ export const getCharacters = async () => {
     } else if (data.data.results.length === 0) {
       return null;
     } else {
-      console.log("default characters from api", data.data.results);
       return data.data.results;
     }
   } catch (error) {
@@ -59,7 +58,6 @@ export const getSpecificCharacter = async (superSearch) => {
     } else if (data.data.results.length === 0) {
       return null;
     } else {
-      console.log("Specific characters from api", data.data.results);
       return data.data.results;
     }
   } catch (error) {
@@ -86,7 +84,6 @@ export const getEvents = async () => {
     } else if (data.data.results.length === 0) {
       return null;
     } else {
-      console.log("Events from api", data.data.results);
       return data.data.results;
     }
   } catch (error) {

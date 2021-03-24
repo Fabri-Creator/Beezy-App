@@ -8,7 +8,7 @@ const Header = () => {
   const [dropDownMenu, setDropDownMenu] = useState(null);
 
   const handleDropDownMenu = () => {
-    if (dropDownMenu === null) {
+    if (!dropDownMenu) {
       setDropDownMenu(true);
     } else {
       setDropDownMenu(null);
@@ -22,15 +22,16 @@ const Header = () => {
         {dropDownMenu && (
           <div className="menu-list-container">
             <ul className="menu-list">
-              <li>Video</li>
-              <li>Characters</li>
-              <li>Movies</li>
-              <li>Games</li>
+              <li className="li-menu">Video</li>
+              <li className="li-menu">Characters</li>
+              <li className="li-menu">Movies</li>
+              <li className="li-menu">Games</li>
             </ul>
           </div>
         )}
       </div>
       <div className="logo" onClick={() => history.push("/")}>
+        {/* process.env.PUBLIC_URL */}
         <img src="../../../../marvel-logo.png" alt="marvel-logo" />
       </div>
     </div>
