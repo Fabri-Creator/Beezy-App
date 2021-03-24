@@ -35,3 +35,29 @@
     }
   }
 }
+
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 390px) and (min-width: 280px) {
+  .bar-search {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: 100%;
+    }
+    .button-search {
+      width: 100%;
+    }
+  }
+}
+
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 280px) {
+  .main-search {
+    display: none;
+  }
+}
