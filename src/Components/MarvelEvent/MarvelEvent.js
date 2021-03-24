@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 import { getEvents } from "../../Services";
+import { setEvents } from "./../../redux/actions/eventsAction";
 import { orderByAlpha } from "../../Logic";
 
 import Displayer from "../Displayer";
@@ -9,6 +11,7 @@ import AlphaSort from "../AlphaSort";
 import "./MarvelEvent.scss";
 
 const MarvelEvent = () => {
+  const dispatch = useDispatch();
   const [eventsList, setEventsList] = useState(null);
 
   useEffect(() => {
@@ -16,6 +19,10 @@ const MarvelEvent = () => {
       setEventsList(eventsList);
     });
   }, []);
+
+  useEffect(() => {
+    dispatch(setEvents(eventsList));
+  }, [eventsList]);
 
   const handleSort = (e) => {
     e.preventDefault();

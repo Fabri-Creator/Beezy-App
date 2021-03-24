@@ -1,6 +1,27 @@
+import { useParams, useHistory } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+
 import "./InfoDisplayer.scss";
 
 const InfoDisplayer = () => {
+  const history = useHistory();
+  const { id } = useParams();
+  const dataList = useSelector((state) =>
+    id.slice(1) > 1000000 ? state.characters : state.events
+  );
+  const [idData, setIdData] = useState(null);
+
+  useEffect(() => {
+    // filter item from general state(redux) and set local state to render info (item = event or character selected)
+    dataList &&
+      dataList.map((data) => {
+        if (data.id.toString() === id.slice(1).toString()) {
+          setIdData(data);
+        }
+      });
+  }, []);
+
   const handleGoBack = () => {
     return history.push("/");
   };

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
+import { setCharacters } from "./../../redux/actions/charactersAction";
 import { getCharacters, getSpecificCharacter } from "./../../Services";
 
 import Displayer from "./../Displayer";
@@ -8,6 +10,7 @@ import SuperSearch from "./../SuperSearch";
 import "./Characters.scss";
 
 const Characters = () => {
+  const dispatch = useDispatch();
   const [superSearch, setSuperSearch] = useState(null);
   const [superList, setSuperList] = useState(null);
 
@@ -17,6 +20,10 @@ const Characters = () => {
       setSuperList(characters);
     });
   }, []);
+
+  useEffect(() => {
+    superList && dispatch(setCharacters(superList));
+  }, [superList]);
 
   const handleSuperHeroName = (e) => {
     e.preventDefault();
