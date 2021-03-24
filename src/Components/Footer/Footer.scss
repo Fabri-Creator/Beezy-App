@@ -23,3 +23,48 @@
     width: 10rem;
   }
 }
+
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 825px) {
+  .main-header {
+    .menu-container {
+      width: 10%;
+      .menu-list-container {
+        .menu-list li {
+          padding: 2rem 2rem;
+        }
+      }
+    }
+    .logo img {
+      height: 80%;
+    }
+  }
+}
+
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 390px) and (min-width: 280px) {
+  .main-header {
+    .menu-container {
+      width: 20%;
+      .menu-list-container {
+        width: 520%;
+        .menu-list li {
+          padding: 2rem 2rem;
+        }
+      }
+    }
+    .logo img {
+      height: 70%;
+    }
+  }
+}
+
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 280px) {
+  .main-header {
+    display: none;
+  }
+}
