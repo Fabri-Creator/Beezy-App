@@ -26,18 +26,17 @@
 
 //////////////  Responisve limit  /////////////////
 
-@media only screen and (max-width: 825px) {
-  .main-header {
-    .menu-container {
-      width: 10%;
-      .menu-list-container {
-        .menu-list li {
-          padding: 2rem 2rem;
-        }
-      }
+@media only screen and (max-width: 860px) {
+  .main-footer {
+    .ul-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    .logo img {
-      height: 80%;
+    img {
+      padding: 1rem;
+      width: 10rem;
     }
   }
 }
@@ -45,18 +44,16 @@
 //////////////  Responisve limit  /////////////////
 
 @media only screen and (max-width: 390px) and (min-width: 280px) {
-  .main-header {
-    .menu-container {
-      width: 20%;
-      .menu-list-container {
-        width: 520%;
-        .menu-list li {
-          padding: 2rem 2rem;
-        }
-      }
+  .main-footer {
+    .ul-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    .logo img {
-      height: 70%;
+    img {
+      padding: 1rem;
+      width: 8rem;
     }
   }
 }
@@ -64,7 +61,7 @@
 //////////////  Responisve limit  /////////////////
 
 @media only screen and (max-width: 280px) {
-  .main-header {
+  .main-footer {
     display: none;
   }
 }
