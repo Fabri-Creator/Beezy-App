@@ -1,0 +1,49 @@
+.main-header {
+  position: relative;
+  height: 4rem;
+  width: 100%;
+  padding: 0.5% 1%;
+  border-bottom: 1px solid darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .menu-container {
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    width: 5%;
+    left: 0rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid darkgray;
+    .menu-list-container {
+      z-index: 2100;
+      position: absolute;
+      width: auto;
+      top: 100%;
+      left: 0rem;
+      background-color: #151515;
+      .menu-list {
+        list-style: none;
+        padding: 1rem 2rem;
+        li {
+          padding: 1rem 2rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .logo {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: auto;
+  }
+  img {
+    height: 100%;
+  }
+}
