@@ -19,3 +19,35 @@
 .alphasort:focus {
   background-color: #151515;
 }
+
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 860px) {
+  .main-alphasort {
+    padding: 1rem 7% 1.5% 7%;
+    p {
+      padding-right: 1rem;
+    }
+    select.alphasort {
+      padding: 0rem 1rem;
+    }
+  }
+}
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 390px) and (min-width: 280px) {
+  .main-alphasort {
+    padding: 1rem 10% 1.5% 10%;
+    p {
+      padding-right: 1rem;
+    }
+  }
+}
+
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 280px) {
+  .main-alphasort {
+    display: none;
+  }
+}
