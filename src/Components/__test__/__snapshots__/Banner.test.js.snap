@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner img render Snapshot of Banner 1`] = `
+<DocumentFragment>
+  <div
+    class="main-banner"
+  >
+    <div
+      class="title-banner"
+    >
+      <h2>
+        MARVEL Beezy EDITION
+      </h2>
+      <h4>
+        This is a technical exercise for Beezy to showcase front-end development skills
+      </h4>
+    </div>
+    <div
+      class="gradient-container"
+    />
+  </div>
+</DocumentFragment>
+`;

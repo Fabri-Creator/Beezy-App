@@ -9,7 +9,7 @@ const Displayer = ({ dataList }) => {
     <div className="main-displayer">
       <div className="title-displayer">
         {dataList ? (
-          <h3 data-testid="header">{`${"MARVEL "}${
+          <h3 title="header">{`${"MARVEL "}${
             dataList[0].name ? "CHARACTERS " : "EVENT "
           }${"LIST"}`}</h3>
         ) : (
