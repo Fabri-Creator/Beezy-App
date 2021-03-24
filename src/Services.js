@@ -66,3 +66,30 @@ export const getSpecificCharacter = async (superSearch) => {
     console.log(error);
   }
 };
+
+export const getEvents = async () => {
+  const response = await fetch(
+    eventsBaseUrl +
+      "limit=" +
+      limit +
+      "&ts=" +
+      ts +
+      "&apikey=" +
+      publicKey +
+      "&hash=" +
+      hash
+  );
+  try {
+    const data = await response.json();
+    if (!data.data.results) {
+      return null;
+    } else if (data.data.results.length === 0) {
+      return null;
+    } else {
+      console.log("Events from api", data.data.results);
+      return data.data.results;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
