@@ -26,3 +26,38 @@
     flex-wrap: wrap;
   }
 }
+
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 860px) {
+  .main-displayer {
+    height: auto;
+    .title-displayer {
+      width: 95%;
+      font-size: 0.9rem;
+      padding: 0% 1.5% 2.5% 1.5%;
+      margin-top: 2rem;
+    }
+  }
+}
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 390px) and (min-width: 280px) {
+  .main-displayer {
+    height: auto;
+    .title-displayer {
+      width: 85%;
+      font-size: 0.9rem;
+      padding: 0% 1.5% 2.5% 1.5%;
+      margin-top: 2rem;
+    }
+  }
+}
+
+//////////////  Responisve limit  /////////////////
+
+@media only screen and (max-width: 280px) {
+  .main-displayer {
+    display: none;
+  }
+}
