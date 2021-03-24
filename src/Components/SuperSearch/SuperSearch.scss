@@ -1,0 +1,37 @@
+.main-search {
+  width: 100%;
+  height: auto;
+  padding: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  h3 {
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+  }
+  .bar-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+      height: 50%;
+      background-color: white;
+      color: black;
+      margin: 1rem 0rem;
+      padding: 0.5rem 1rem;
+      font-size: 1.3rem;
+    }
+    button.button-search {
+      cursor: pointer;
+      height: 50%;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0rem;
+      font-size: 1.3rem;
+      background-color: #ed1d24;
+    }
+  }
+}
