@@ -1,0 +1,25 @@
+.main-footer {
+  height: 10%;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #151515;
+  bottom: 0rem;
+  font-size: 0.8rem;
+  .ul-footer {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    li {
+      padding: 0.5rem;
+    }
+  }
+  img {
+    padding: 1rem;
+    width: 10rem;
+  }
+}
