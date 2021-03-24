@@ -1,7 +1,15 @@
+import { useEffect } from "react";
+
+import { getCharacters } from "./Services";
+
 import "./App.scss";
 
 function App() {
-  return <div className="App">Starting</div>;
+  useEffect(() => {
+    getCharacters();
+  }, []);
+
+  return <div className="App"></div>;
 }
 
 export default App;
