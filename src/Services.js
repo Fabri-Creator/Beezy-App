@@ -10,46 +10,23 @@ const hash = "e7c44c2233e8b65123d9bff8b3c94bba";
 //  Number of objects inside the response (array)
 const limit = 6;
 
-export const getCharacters = async () => {
-  const response = await fetch(
-    charactersBaseUrl +
-      "limit=" +
-      limit +
-      "&ts=" +
-      ts +
-      "&apikey=" +
-      publicKey +
-      "&hash=" +
-      hash
-  );
-  try {
-    const { data } = await response.json();
-    if (!data.results) {
-      return null;
-    } else if (data.results.length === 0) {
-      return null;
-    } else {
-      return data.results;
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+export const get = async (base, nameStartsWith = null) => {
+  let url =
+    base +
+    "limit=" +
+    limit +
+    "&ts=" +
+    ts +
+    "&apikey=" +
+    publicKey +
+    "&hash=" +
+    hash;
 
-export const getSpecificCharacter = async (superSearch) => {
-  const response = await fetch(
-    charactersBaseUrl +
-      "nameStartsWith=" +
-      superSearch +
-      "&limit=" +
-      limit +
-      "&ts=" +
-      ts +
-      "&apikey=" +
-      publicKey +
-      "&hash=" +
-      hash
-  );
+  if (nameStartsWith) {
+    url += `&nameStartsWith=${nameStartsWith}`;
+  }
+
+  const response = await fetch(url);
 
   try {
     const { data } = await response.json();
@@ -65,28 +42,9 @@ export const getSpecificCharacter = async (superSearch) => {
   }
 };
 
-export const getEvents = async () => {
-  const response = await fetch(
-    eventsBaseUrl +
-      "limit=" +
-      limit +
-      "&ts=" +
-      ts +
-      "&apikey=" +
-      publicKey +
-      "&hash=" +
-      hash
-  );
-  try {
-    const { data } = await response.json();
-    if (!data.results) {
-      return null;
-    } else if (data.results.length === 0) {
-      return null;
-    } else {
-      return data.results;
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+export const getCharacters = () => get(charactersBaseUrl);
+
+export const getSpecificCharacter = (nameStartsWith) =>
+  get(charactersBaseUrl, nameStartsWith);
+
+export const getEvents = () => get(eventsBaseUrl);

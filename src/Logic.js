@@ -1,4 +1,1 @@
-export const orderByAlpha = (list) => {
-  const newOrder = [...list].reverse(list.title);
-  return newOrder;
-};
+export const orderByAlpha = (list) => [...list].reverse();
