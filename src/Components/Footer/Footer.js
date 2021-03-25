@@ -9,8 +9,10 @@ const Footer = () => {
         <li className="li-footer">CAREERS</li>
         <li className="li-footer">INTERNSHIPS</li>
       </ul>
-      {/* process.env.PUBLIC_URL */}
-      <img src="../../../../marvel+beezy-logo.png" alt="marvel-logo" />
+      <img
+        src={`${process.env.PUBLIC_URL}/marvel+beezy-logo.png`}
+        alt="marvel-beezy-logo"
+      />
     </div>
   );
 };

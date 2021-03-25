@@ -32,7 +32,10 @@ const Header = () => {
       </div>
       <div className="logo" onClick={() => history.push("/")}>
         {/* process.env.PUBLIC_URL */}
-        <img src="../../../../marvel-logo.png" alt="marvel-logo" />
+        <img
+          src={`${process.env.PUBLIC_URL}/marvel-logo.png`}
+          alt="marvel-logo"
+        />
       </div>
     </div>
   );

@@ -23,13 +23,13 @@ export const getCharacters = async () => {
       hash
   );
   try {
-    const data = await response.json();
-    if (!data.data.results) {
+    const { data } = await response.json();
+    if (!data.results) {
       return null;
-    } else if (data.data.results.length === 0) {
+    } else if (data.results.length === 0) {
       return null;
     } else {
-      return data.data.results;
+      return data.results;
     }
   } catch (error) {
     console.log(error);
@@ -52,13 +52,13 @@ export const getSpecificCharacter = async (superSearch) => {
   );
 
   try {
-    const data = await response.json();
-    if (!data.data.results) {
+    const { data } = await response.json();
+    if (!data.results) {
       return null;
-    } else if (data.data.results.length === 0) {
+    } else if (data.results.length === 0) {
       return null;
     } else {
-      return data.data.results;
+      return data.results;
     }
   } catch (error) {
     console.log(error);
@@ -78,13 +78,13 @@ export const getEvents = async () => {
       hash
   );
   try {
-    const data = await response.json();
-    if (!data.data.results) {
+    const { data } = await response.json();
+    if (!data.results) {
       return null;
-    } else if (data.data.results.length === 0) {
+    } else if (data.results.length === 0) {
       return null;
     } else {
-      return data.data.results;
+      return data.results;
     }
   } catch (error) {
     console.log(error);
