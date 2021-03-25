@@ -11,15 +11,24 @@ import "./Characters.scss";
 
 const Characters = () => {
   const dispatch = useDispatch();
-  const [superSearch, setSuperSearch] = useState(null);
+  const [inputValue, setInputValue] = useState(null);
   const [superList, setSuperList] = useState(null);
 
   useEffect(() => {
-    // Codigo de función fuera porque se usa dos veces?
     getCharacters().then((characters) => {
       setSuperList(characters);
     });
   }, []);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      handleSuperHeroSearch();
+    }, 500);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [inputValue]);
 
   useEffect(() => {
     superList && dispatch(setCharacters(superList));
@@ -28,17 +37,17 @@ const Characters = () => {
   const handleSuperHeroName = (e) => {
     e.preventDefault();
     const { value } = e.target;
-    value === "" || undefined
-      ? // funcion fuera porque se usa dos veces?
-        getCharacters().then((characters) => {
-          setSuperList(characters);
-        })
-      : setSuperSearch(value);
+    setInputValue(value);
+    if (!value) {
+      getCharacters().then((characters) => {
+        setSuperList(characters);
+      });
+    }
   };
 
   const handleSuperHeroSearch = () => {
-    superSearch &&
-      getSpecificCharacter(superSearch).then((characters) => {
+    inputValue &&
+      getSpecificCharacter(inputValue).then((characters) => {
         setSuperList(characters);
       });
   };
