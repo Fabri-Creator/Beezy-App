@@ -9,7 +9,7 @@ const Card = ({ hero }) => {
     <>
       {hero && (
         <div className="main-card">
-          <Link to={`/detail/id:${hero.id}`} />
+          <Link className="click-link" to={`/detail/id:${hero.id}`} />
           <div className="img-card">
             <img
               src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}

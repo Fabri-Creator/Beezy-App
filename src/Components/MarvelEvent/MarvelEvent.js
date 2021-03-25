@@ -24,15 +24,8 @@ const MarvelEvent = () => {
     dispatch(setEvents(eventsList));
   }, [eventsList]);
 
-  const handleSort = (e) => {
-    e.preventDefault();
-    const { value } = e.target;
-    if (value === "Z-A") {
-      const newOrder = orderByAlpha(eventsList);
-      return setEventsList(newOrder);
-    } else {
-      return getEvents(setEventsList);
-    }
+  const handleSort = () => {
+    return setEventsList(orderByAlpha(eventsList));
   };
 
   return (

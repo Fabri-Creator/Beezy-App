@@ -42,7 +42,7 @@ const InfoDisplayer = () => {
               onClick={handleGoBack}
             ></i>
             <div className="title-container">
-              <h2 className="title-containe-text">
+              <h2 className="title-container-text">
                 {idData.name
                   ? idData.name.toUpperCase()
                   : idData.title.toUpperCase()}{" "}

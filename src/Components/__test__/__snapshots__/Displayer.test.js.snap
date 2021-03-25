@@ -9,7 +9,7 @@ exports[`Displayer rendering Snapshot of Displayer 1`] = `
       class="title-displayer"
     >
       <h3
-        data-testid="header"
+        title="header"
       >
         MARVEL CHARACTERS LIST
       </h3>
@@ -21,6 +21,7 @@ exports[`Displayer rendering Snapshot of Displayer 1`] = `
         class="main-card"
       >
         <a
+          class="click-link"
           href="/detail/id:1011334"
         />
         <div

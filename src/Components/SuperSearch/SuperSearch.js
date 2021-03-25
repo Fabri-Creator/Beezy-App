@@ -14,11 +14,12 @@ const SuperSearch = ({ handleSuperHeroName, handleSuperHeroSearch }) => {
       <div className="bar-search">
         <form onSubmit={handleSubmit}>
           <input
+            title="inputTest"
             type="text"
             placeholder="Search"
             onChange={handleSuperHeroName}
           />
-          <button type="submit" className="button-search">
+          <button type="submit" className="button-search" title="buttonTest">
             OK
           </button>
         </form>
@@ -28,8 +29,8 @@ const SuperSearch = ({ handleSuperHeroName, handleSuperHeroSearch }) => {
 };
 
 SuperSearch.propTypes = {
-  handleSuperHeroName: PropTypes.func.isRequired,
-  handleSuperHeroSearch: PropTypes.func.isRequired,
+  handleSuperHeroName: PropTypes.func,
+  handleSuperHeroSearch: PropTypes.func,
 };
 
 export default SuperSearch;
