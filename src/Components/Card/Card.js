@@ -39,4 +39,17 @@ Card.propTypes = {
   }),
 };
 
+export const CardShape = PropTypes.shape({
+  thumbnail: PropTypes.shape({
+    path: PropTypes.string.isRequired,
+    extension: PropTypes.string.isRequired,
+  }),
+  name: PropTypes.string,
+  title: PropTypes.string,
+});
+
+Card.propTypes = {
+  hero: CardShape,
+};
+
 export default Card;
