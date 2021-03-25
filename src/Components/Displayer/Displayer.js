@@ -20,7 +20,7 @@ const Displayer = ({ dataList }) => {
       <div className="body-displayer">
         {dataList &&
           dataList.map((hero) => {
-            return <Card key={hero.id} hero={hero}></Card>;
+            return <Card key={hero.id} hero={hero} />;
           })}
       </div>
     </div>

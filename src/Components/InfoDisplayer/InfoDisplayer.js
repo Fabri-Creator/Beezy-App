@@ -15,12 +15,12 @@ const InfoDisplayer = () => {
   useEffect(() => {
     // filter item from general state(redux) and set local state to render info (item = event or character selected)
     dataList &&
-      dataList.map((data) => {
+      dataList.forEach((data) => {
         if (data.id.toString() === id.slice(1).toString()) {
           setIdData(data);
         }
       });
-  }, []);
+  }, [dataList, id]);
 
   const handleGoBack = () => {
     return history.push("/");

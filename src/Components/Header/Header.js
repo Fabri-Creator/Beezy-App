@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div className="main-header">
       <div className="menu-container" onClick={handleDropDownMenu}>
-        <i className="fas fa-bars"></i>
+        <i className="fas fa-bars" />
         {dropDownMenu && (
           <div className="menu-list-container">
             <ul className="menu-list">

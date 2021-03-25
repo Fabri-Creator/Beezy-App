@@ -17,7 +17,7 @@ const Card = ({ hero }) => {
             />
           </div>
           <div className="info-card">
-            <div className="hover-red"></div>
+            <div className="hover-red" />
             <h4 className="text-name" data-testid="Info-name">
               {hero.name ? hero.name.toUpperCase() : hero.title.toUpperCase()}
             </h4>

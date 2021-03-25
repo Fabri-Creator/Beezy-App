@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useDispatch } from "react-redux";
 
 import { setCharacters } from "./../../redux/actions/charactersAction";
@@ -21,18 +21,8 @@ const Characters = () => {
   }, []);
 
   useEffect(() => {
-    const handler = setTimeout(() => {
-      handleSuperHeroSearch();
-    }, 500);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [inputValue]);
-
-  useEffect(() => {
     superList && dispatch(setCharacters(superList));
-  }, [superList]);
+  }, [superList, dispatch]);
 
   const handleSuperHeroName = (e) => {
     e.preventDefault();
@@ -45,12 +35,22 @@ const Characters = () => {
     }
   };
 
-  const handleSuperHeroSearch = () => {
+  const handleSuperHeroSearch = useCallback(() => {
     inputValue &&
       getSpecificCharacter(inputValue).then((characters) => {
         setSuperList(characters);
       });
-  };
+  }, [inputValue]);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      handleSuperHeroSearch();
+    }, 500);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [inputValue, handleSuperHeroSearch]);
 
   return (
     <>

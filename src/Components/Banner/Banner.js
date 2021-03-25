@@ -24,13 +24,13 @@ const Banner = () => {
           development skills
         </h4>
       </div>
-      <div className="gradient-container"></div>
+      <div className="gradient-container" />
       {bannerInfo && (
         <div className="img-banner">
           <img
             alt={bannerInfo[bannerImg].thumbnail.path}
-            src={`${bannerInfo[bannerImg].thumbnail.path}.${bannerInfo[bannerImg].thumbnail.extension}`}
-          ></img>
+            src={`${bannerInfo[bannerImg].thumbnail.path}.${bannerInfo[bannerImg].thumbnail.extension}`} //
+          />
         </div>
       )}
     </div>

@@ -22,7 +22,7 @@ const MarvelEvent = () => {
 
   useEffect(() => {
     dispatch(setEvents(eventsList));
-  }, [eventsList]);
+  }, [eventsList, dispatch]);
 
   const handleSort = () => {
     return setEventsList(orderByAlpha(eventsList));
@@ -30,9 +30,10 @@ const MarvelEvent = () => {
 
   return (
     <>
-      <AlphaSort handleSort={handleSort}></AlphaSort>
-      <Displayer dataList={eventsList}></Displayer>
+      <AlphaSort handleSort={handleSort} />
+      <Displayer dataList={eventsList} />
     </>
   );
 };
+
 export default MarvelEvent;
