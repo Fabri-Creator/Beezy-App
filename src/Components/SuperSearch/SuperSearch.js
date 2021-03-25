@@ -29,8 +29,8 @@ const SuperSearch = ({ handleSuperHeroName, handleSuperHeroSearch }) => {
 };
 
 SuperSearch.propTypes = {
-  handleSuperHeroName: PropTypes.func,
-  handleSuperHeroSearch: PropTypes.func,
+  handleSuperHeroName: PropTypes.func.isRequired,
+  handleSuperHeroSearch: PropTypes.func.isRequired,
 };
 
 export default SuperSearch;

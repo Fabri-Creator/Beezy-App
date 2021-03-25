@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 import Card from "./../Card";
+import CardShape from "./../Card/Card";
 
 import "./Displayer.scss";
 
@@ -27,7 +28,9 @@ const Displayer = ({ dataList }) => {
 };
 
 Displayer.propTypes = {
-  dataList: PropTypes.arrayOf(PropTypes.object),
+  dataList: PropTypes.arrayOf(CardShape),
 };
+
+Displayer.defaultProps = { dataList: [] };
 
 export default Displayer;
