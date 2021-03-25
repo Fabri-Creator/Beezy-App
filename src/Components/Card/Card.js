@@ -28,17 +28,6 @@ const Card = ({ hero }) => {
   );
 };
 
-Card.propTypes = {
-  hero: PropTypes.shape({
-    thumbnail: PropTypes.shape({
-      path: PropTypes.string.isRequired,
-      extension: PropTypes.string.isRequired,
-    }),
-    name: PropTypes.string,
-    title: PropTypes.string,
-  }),
-};
-
 export const CardShape = PropTypes.shape({
   thumbnail: PropTypes.shape({
     path: PropTypes.string.isRequired,

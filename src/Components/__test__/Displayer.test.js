@@ -24,12 +24,14 @@ describe("Displayer rendering", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  // test("Finding name", () => {
-  //   const { queryByTitle } = render(
-  //     <Router>
-  //       <Displayer dataList={dataTest} />
-  //     </Router>
-  //   );
-  //   expect(queryByTitle("header")).toHaveTextContent("MARVEL CHARACTERS LIST");
-  // });
+  test("Finding name", () => {
+    const { queryByTitle } = render(
+      <Router>
+        <Displayer dataList={dataTest} />
+      </Router>
+    );
+    expect(queryByTitle("header").textContent).toMatch(
+      "MARVEL CHARACTERS LIST"
+    );
+  });
 });

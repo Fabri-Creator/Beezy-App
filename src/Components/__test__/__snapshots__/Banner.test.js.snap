@@ -8,10 +8,14 @@ exports[`Banner img render Snapshot of Banner 1`] = `
     <div
       class="title-banner"
     >
-      <h2>
+      <h2
+        class="title-dos"
+      >
         MARVEL Beezy EDITION
       </h2>
-      <h4>
+      <h4
+        class="title-cuatro"
+      >
         This is a technical exercise for Beezy to showcase front-end development skills
       </h4>
     </div>

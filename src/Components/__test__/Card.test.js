@@ -4,16 +4,14 @@ import userEvent from "@testing-library/user-event";
 
 import Card from "./../Card";
 
-const dataTest = [
-  {
-    id: 1011334,
-    name: "Batman",
-    thumbnail: {
-      path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
-      extension: "jpg",
-    },
+const dataTest = {
+  id: 1011334,
+  name: "Batman",
+  thumbnail: {
+    path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+    extension: "jpg",
   },
-];
+};
 
 describe("Card api data", () => {
   test("Snapshot of Card", () => {
@@ -24,13 +22,12 @@ describe("Card api data", () => {
     );
     expect(asFragment()).toMatchSnapshot();
   });
-  // este falla
-  // test("Finding name", () => {
-  //   const { getByTestId } = render(
-  //     <Router>
-  //       <Card characterData={dataTest} />
-  //     </Router>
-  //   );
-  //   expect(getByTestId("Info-name")).toHaveTextContent("Batman".toUpperCase());
-  // });
+  test("Finding name", () => {
+    const { getByTestId } = render(
+      <Router>
+        <Card hero={dataTest} />
+      </Router>
+    );
+    expect(getByTestId("Info-name").textContent).toMatch("BATMAN");
+  });
 });
