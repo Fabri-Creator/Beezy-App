@@ -1,7 +1,9 @@
+@import "./../../variables.scss";
+
 .main {
   position: relative;
   width: 100%;
   height: auto;
   color: white;
-  background-color: #151515;
+  background-color: $marvel-dark-gray;
 }

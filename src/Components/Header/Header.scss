@@ -1,3 +1,5 @@
+@import "./../../../variables.scss";
+
 .main-header {
   position: relative;
   height: 4rem;
@@ -24,7 +26,7 @@
       width: auto;
       top: 100%;
       left: 0rem;
-      background-color: #151515;
+      background-color: $marvel-dark-gray;
       .menu-list {
         list-style: none;
         padding: 1rem 2rem;

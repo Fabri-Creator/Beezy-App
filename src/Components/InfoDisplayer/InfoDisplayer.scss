@@ -1,3 +1,5 @@
+@import "./../../../variables.scss";
+
 .main-info-displayer {
   position: relative;
   height: 100%;
@@ -10,7 +12,7 @@
     align-items: center;
     overflow: hidden;
     height: 70vh;
-    border-bottom: 0.15rem solid #ed1d24;
+    border-bottom: 0.15rem solid $marvel-red;
     img {
       width: 100%;
       align-items: center;
@@ -20,7 +22,7 @@
     height: auto;
     width: 100%;
     background-color: white;
-    color: #151515;
+    color: $marvel-dark-gray;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -30,7 +32,7 @@
       align-self: flex-start;
       padding: 1rem 0 0 1rem;
       font-size: 1.5rem;
-      color: #ed1d24;
+      color: $marvel-red;
     }
     .title-container {
       color: black;
@@ -53,7 +55,7 @@
       padding: 0.5rem 1rem;
       margin: rem 0rem 1rem 0rem;
       font-size: 1rem;
-      background-color: #ed1d24;
+      background-color: $marvel-red;
     }
   }
 }

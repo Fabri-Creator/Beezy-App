@@ -10,7 +10,7 @@ const Footer = () => {
         <li className="li-footer">INTERNSHIPS</li>
       </ul>
       {/* process.env.PUBLIC_URL */}
-      <img src="../../marvel+beezy-logo.png" alt="marvel-logo" />
+      <img src="../../../../marvel+beezy-logo.png" alt="marvel-logo" />
     </div>
   );
 };

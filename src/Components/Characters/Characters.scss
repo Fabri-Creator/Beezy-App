@@ -1,5 +1,7 @@
+@import "./../../../variables.scss";
+
 .main-characters {
-  background-color: #151515;
+  background-color: $marvel-dark-gray;
 }
 .title-character {
   height: 10%;
